@@ -9,7 +9,7 @@
 :root {
   --aspect-ratio: 3 / 4;
   --color-text: #333;
-  --font-family: 'IBM Plex Sans', sans-serif;
+  --font-family: sans-serif;
   --header-height: 56px;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  margin-top: calc(var(--header-height) + 16px);
+  margin-top: calc(var(--header-height) + 48px);
 }
 
 a {
@@ -44,6 +44,7 @@ section + section {
 
 .page-width {
   margin: 0 auto;
+  padding: 0 8px;
   width: min(100ch, 100vh);
 }
 
@@ -94,8 +95,9 @@ section + section {
 
 .Gallery {
   display: grid;
-  gap: 32px;
+  gap: 48px;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 48px;
 }
 
 .GalleryItem > * + * {
