@@ -7,12 +7,14 @@
 }
 
 :root {
+  --color-text: #333;
   --font-family: 'IBM Plex Sans', sans-serif;
   --font-size-ui: 0.875rem;
   --header-height: 56px;
 }
 
 body {
+  color: var(--color-text);
   font-family: var(--font-family);
 }
 
