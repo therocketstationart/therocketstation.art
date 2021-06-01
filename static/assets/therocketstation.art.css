@@ -10,7 +10,6 @@
   --aspect-ratio: 3 / 4;
   --color-text: #333;
   --font-family: 'IBM Plex Sans', sans-serif;
-  --font-size-ui: 0.875rem;
   --header-height: 56px;
 }
 
@@ -77,9 +76,7 @@ section + section {
 .Header__Menu {
   display: flex;
   flex: 1;
-  font-size: var(--font-size-ui);
   justify-content: flex-end;
-  text-transform: uppercase;
 }
 
 .Header__Menu ul {
