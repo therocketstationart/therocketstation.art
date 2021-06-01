@@ -3,5 +3,8 @@
 {% block title %}The Rocket Station Art | therocketstation.art{% endblock %}
 
 {% block content %}
-  {{ section.content }}
+  {% set originals = get_section(path='originals/_index.md') %}
+  {% set prints = get_section(path='prints/_index.md') %}
+
+  {# {{ section.content }} #}
 {% endblock %}

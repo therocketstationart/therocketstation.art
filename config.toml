@@ -1,4 +1,5 @@
-base_url = "https://therocketstation.art"
+base_url = 'https://therocketstation.art'
+title = 'The Rocket Station Art'
 
 [markdown]
 external_links_target_blank = true

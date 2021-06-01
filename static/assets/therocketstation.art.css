@@ -5,3 +5,78 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --font-family: 'IBM Plex Sans', sans-serif;
+  --font-size-ui: 0.875rem;
+  --header-height: 56px;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+main {
+  margin-top: var(--header-height);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.page-width {
+  margin: 0 auto;
+  width: min(100ch, 100vh);
+}
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-inner {
+  align-items: center;
+  display: flex;
+  height: var(--header-height);
+}
+
+.header .logo {
+  width: 40px;
+}
+
+.header .logo + .name {
+  margin-left: 16px;
+}
+
+.header .name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.header .menu {
+  display: flex;
+  flex: 1;
+  font-size: var(--font-size-ui);
+  justify-content: flex-end;
+  text-transform: uppercase;
+}
+
+.header .menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.header .menu li + li {
+  margin-left: 16px;
+}
+
+.header .menu a {
+  text-decoration: none;
+}

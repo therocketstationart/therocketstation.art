@@ -8,6 +8,19 @@
   <link href="/favicon.png" rel="icon" />
 </head>
 <body>
+  <header class="header">
+    <div class="header-inner page-width">
+      <div class="logo"><a href="/"><img alt="{{ config.title }}" src="/assets/logo.png" /></a></div>
+      <div class="name">{{ config.title }}</div>
+      <nav class="menu">
+        <ul>
+          <li><a href="/originals">Originals</a></li>
+          <li><a href="/prints">Prints</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
     {% block content %}{% endblock %}
   </main>
