@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}The Rocket Station Art | therocketstation.art{% endblock %}
+{% import 'macros/common.html' as common %}
+
+{% block title %}{{ config.title }}{% endblock %}
 
 {% block content %}
-  {% set originals = get_section(path='originals/_index.md') %}
-  {% set prints = get_section(path='prints/_index.md') %}
-
-  {# {{ section.content }} #}
+  {{ common::gallery(name='originals', max=6) }}
+  {{ common::gallery(name='prints', max=6) }}
 {% endblock %}

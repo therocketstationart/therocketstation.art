@@ -7,6 +7,7 @@
 }
 
 :root {
+  --aspect-ratio: 3 / 4;
   --color-text: #333;
   --font-family: 'IBM Plex Sans', sans-serif;
   --font-size-ui: 0.875rem;
@@ -15,15 +16,21 @@
 
 body {
   color: var(--color-text);
+  line-height: 1.5;
   font-family: var(--font-family);
 }
 
 main {
-  margin-top: var(--header-height);
+  margin-top: calc(var(--header-height) + 16px);
 }
 
 a {
   color: inherit;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
 }
 
 img {
@@ -31,38 +38,43 @@ img {
   width: 100%;
 }
 
+section > * + *,
+section + section {
+  margin-top: 16px;
+}
+
 .page-width {
   margin: 0 auto;
   width: min(100ch, 100vh);
 }
 
-.header {
+.Header {
   background-color: #fff;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-.header-inner {
+.Header__Inner {
   align-items: center;
   display: flex;
   height: var(--header-height);
 }
 
-.header .logo {
+.Header__Logo {
   width: 40px;
 }
 
-.header .logo + .name {
+.Header__Logo + .Header__Name {
   margin-left: 16px;
 }
 
-.header .name {
+.Header__Name {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.header .menu {
+.Header__Menu {
   display: flex;
   flex: 1;
   font-size: var(--font-size-ui);
@@ -70,15 +82,53 @@ img {
   text-transform: uppercase;
 }
 
-.header .menu ul {
+.Header__Menu ul {
   display: flex;
   list-style: none;
 }
 
-.header .menu li + li {
+.Header__Menu li + li {
   margin-left: 16px;
 }
 
-.header .menu a {
+.Header__Menu a {
   text-decoration: none;
+}
+
+.Gallery {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.GalleryItem > * + * {
+  margin-top: 8px;
+}
+
+.GalleryItem__Image {
+  width: 100%;
+}
+
+.GalleryItem__Image {
+  position: relative;
+}
+
+.GalleryItem__Image::after {
+  background-color: #eee;
+  content: '';
+  display: block;
+  padding-bottom: calc(100% / (var(--aspect-ratio)));
+}
+
+.GalleryItem__Image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.GalleryItem__Title {
+  text-align: center;
 }

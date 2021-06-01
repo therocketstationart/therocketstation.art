@@ -1,0 +1,36 @@
+{% macro gallery(name, max=0) %}
+  {% set gallery_section = get_section(path=name ~ '/_index.md') %}
+
+  {% if gallery_section.pages | length > 0 %}
+    <section class="page-width">
+      <h2>{{ gallery_section.title }}</h2>
+
+      <div class="Gallery">
+        {% if max > 0 %}
+          {% set items = gallery_section.pages | slice(end=max) %}
+        {% else %}
+          {% set items = gallery_section.pages %}
+        {% endif %}
+
+        {% for item in items %}
+          {% set without_ext = self::gallery_image_without_ext(item=item) %}
+          {% set image = without_ext ~ '.jpg' %}
+          {% set image_hover = without_ext ~ '-hover.jpg' %}
+
+          <div class="GalleryItem">
+            <div class="GalleryItem__Image">
+              <img alt="{{ item.title }}" src="{{ image }}" />
+            </div>
+            <div class="GalleryItem__Title">
+              {{ item.title }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endmacro %}
+
+{% macro gallery_image_without_ext(item) -%}
+  {{ ['', 'assets'] | concat(with=item.components) | join(sep='/') }}
+{%- endmacro %}
