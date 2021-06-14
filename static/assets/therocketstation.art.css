@@ -54,6 +54,7 @@ main {
 
 a {
   color: inherit;
+  transition: all 0.1s;
 }
 
 a:hover {
