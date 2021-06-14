@@ -37,7 +37,7 @@
 :root {
   --aspect-ratio: 3 / 4;
   --color-accent: #5465ff; /* hsluv 264 100 50 */
-  --color-text: #333;
+  --color-text: #262626;
   --font-family: 'Montserrat', sans-serif;
   --header-height: 64px;
 }
