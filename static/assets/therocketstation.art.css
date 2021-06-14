@@ -54,7 +54,8 @@ main {
 
 a {
   color: inherit;
-  transition: all 0.1s;
+  text-underline-offset: 0.05em;
+  transition: all 0.2s;
 }
 
 a:hover {
@@ -132,7 +133,11 @@ section + section {
 }
 
 .Header__Menu a {
-  text-decoration: none;
+  text-decoration-color: transparent;
+}
+
+.Header__Menu a:hover {
+  text-decoration-color: var(--color-accent);
 }
 
 .Gallery {
@@ -147,11 +152,8 @@ section + section {
 }
 
 .GalleryItem__Image {
-  width: 100%;
-}
-
-.GalleryItem__Image {
   position: relative;
+  width: 100%;
 }
 
 .GalleryItem__Image::after {
