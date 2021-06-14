@@ -50,7 +50,7 @@ body {
 }
 
 main {
-  margin-top: calc(var(--header-height) + 32px);
+  margin-top: calc(var(--header-height) + 48px);
 }
 
 a {
@@ -118,8 +118,12 @@ section + section {
   margin-left: 16px;
 }
 
-.Header__Name {
+.Header__Name,
+.Header__ArtistName {
   font-size: 1.25rem;
+}
+
+.Header__Name {
   font-weight: 600;
 }
 
