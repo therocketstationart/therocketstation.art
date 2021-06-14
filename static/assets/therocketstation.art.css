@@ -55,6 +55,7 @@ main {
 
 a {
   color: inherit;
+  text-decoration-thickness: 0.075em;
   text-underline-offset: 0.05em;
   transition: all var(--delay);
 }
@@ -98,6 +99,10 @@ section + section {
   height: var(--header-height);
 }
 
+.Header__Inner > * {
+  flex: 1;
+}
+
 .Header__HomeLink {
   align-items: center;
   display: flex;
@@ -116,6 +121,10 @@ section + section {
 .Header__Name {
   font-size: 1.25rem;
   font-weight: 600;
+}
+
+.Header__ArtistName {
+  text-align: center;
 }
 
 .Header__Menu {
