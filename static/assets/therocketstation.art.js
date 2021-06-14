@@ -1,5 +1,3 @@
-import lightense from 'https://cdn.skypack.dev/lightense-images';
+import mediumZoom from 'https://cdn.skypack.dev/medium-zoom';
 
-console.log(lightense);
-
-window.lightense = lightense;
+mediumZoom('.Gallery img');
