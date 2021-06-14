@@ -38,7 +38,7 @@
   --aspect-ratio: 3 / 4;
   --color-text: #333;
   --font-family: 'Montserrat', sans-serif;
-  --header-height: 56px;
+  --header-height: 64px;
 }
 
 body {
@@ -91,7 +91,7 @@ section + section {
 }
 
 .Header__Logo {
-  width: 40px;
+  width: 48px;
 }
 
 .Header__Logo + .Header__Name {
