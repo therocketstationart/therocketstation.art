@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/Montserrat-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/Montserrat-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/Montserrat-Black.woff2') format('woff2');
+}
+
 *::after,
 *::before,
 * {
@@ -9,7 +37,7 @@
 :root {
   --aspect-ratio: 3 / 4;
   --color-text: #333;
-  --font-family: sans-serif;
+  --font-family: 'Montserrat', sans-serif;
   --header-height: 56px;
 }
 
@@ -20,7 +48,7 @@ body {
 }
 
 main {
-  margin-top: calc(var(--header-height) + 48px);
+  margin-top: calc(var(--header-height) + 32px);
 }
 
 a {
@@ -29,6 +57,7 @@ a {
 
 h2 {
   font-size: 2rem;
+  font-weight: 900;
   text-align: center;
 }
 
@@ -95,9 +124,9 @@ section + section {
 
 .Gallery {
   display: grid;
-  gap: 48px;
+  gap: 16px;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 .GalleryItem > * + * {
