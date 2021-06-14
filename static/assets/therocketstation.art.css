@@ -36,6 +36,7 @@
 
 :root {
   --aspect-ratio: 3 / 4;
+  --color-accent: #5465ff;
   --color-text: #333;
   --font-family: 'Montserrat', sans-serif;
   --header-height: 64px;
@@ -53,6 +54,10 @@ main {
 
 a {
   color: inherit;
+}
+
+a:hover {
+  color: var(--color-accent);
 }
 
 h2 {
