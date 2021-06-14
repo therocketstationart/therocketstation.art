@@ -38,6 +38,7 @@
   --aspect-ratio: 3 / 4;
   --color-accent: #5465ff; /* hsluv 264 100 50 */
   --color-text: #262626;
+  --delay: 0.2s;
   --font-family: 'Montserrat', sans-serif;
   --header-height: 64px;
 }
@@ -55,7 +56,7 @@ main {
 a {
   color: inherit;
   text-underline-offset: 0.05em;
-  transition: all 0.2s;
+  transition: all var(--delay);
 }
 
 a:hover {
