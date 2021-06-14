@@ -95,6 +95,13 @@ section + section {
   height: var(--header-height);
 }
 
+.Header__HomeLink {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  text-decoration: none;
+}
+
 .Header__Logo {
   width: 48px;
 }

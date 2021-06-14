@@ -13,8 +13,10 @@
 <body>
   <header class="Header">
     <div class="Header__Inner page-width">
-      <div class="Header__Logo"><a href="/"><img alt="{{ config.title }}" src="/assets/logo.png" /></a></div>
-      <div class="Header__Name">{{ config.title }}</div>
+      <a class="Header__HomeLink" href="/">
+        <div class="Header__Logo"><img alt="{{ config.title }}" src="/assets/logo.png" /></div>
+        <div class="Header__Name">{{ config.title }}</div>
+      </a>
       <nav class="Header__Menu">
         <ul>
           <li><a href="/originals">Originals</a></li>
