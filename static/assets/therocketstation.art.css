@@ -166,7 +166,7 @@ section > * + * {
 
 .Gallery {
   display: grid;
-  gap: 16px;
+  gap: 32px 16px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 32px;
 }
