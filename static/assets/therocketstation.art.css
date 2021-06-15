@@ -41,6 +41,8 @@
   --delay: 0.2s;
   --font-family: 'Montserrat', sans-serif;
   --header-height: 64px;
+  --layer-header: 1;
+  --layer-overlay: 2;
 }
 
 body {
@@ -100,7 +102,7 @@ section > * + * {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: var(--layer-header);
 }
 
 .Header__Inner {
@@ -198,4 +200,11 @@ section > * + * {
 
 .GalleryItem__Title {
   text-align: center;
+}
+
+/* Third party */
+
+.medium-zoom-image--opened,
+.medium-zoom-overlay {
+  z-index: var(--layer-overlay);
 }
