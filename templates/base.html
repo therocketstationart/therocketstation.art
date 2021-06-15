@@ -20,8 +20,13 @@
       <div class="Header__ArtistName">{{ config.extra.artist_name }}</div>
       <nav class="Header__Menu">
         <ul>
-          <li><a href="/originals">Originals</a></li>
-          <li><a href="/prints">Prints</a></li>
+          {% set collections = get_section(path='collections/_index.md', metadata_only=true) %}
+
+          {% for path in collections.subsections %}
+            {% set collection = get_section(path=path, metadata_only=true) %}
+
+            <li><a href="{{ collection.path }}">{{ collection.title }}</a></li>
+          {% endfor %}
           <li><a href="/about">About</a></li>
         </ul>
       </nav>

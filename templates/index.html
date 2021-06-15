@@ -5,6 +5,11 @@
 {% block title %}{{ config.title }}{% endblock %}
 
 {% block content %}
-  {{ common::gallery(name='originals', max=6) }}
-  {{ common::gallery(name='prints', max=6) }}
+  {% set collections = get_section(path='collections/_index.md', metadata_only=true) %}
+
+  {% for path in collections.subsections %}
+    {{ common::gallery(gallery_section=get_section(path=path), max=6) }}
+
+    {# TODO: If more than 6 items in the collection, render 'View all' link to collection page. #}
+  {% endfor %}
 {% endblock %}

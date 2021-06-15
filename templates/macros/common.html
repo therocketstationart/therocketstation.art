@@ -1,6 +1,4 @@
-{% macro gallery(name, max=0) %}
-  {% set gallery_section = get_section(path=name ~ '/_index.md') %}
-
+{% macro gallery(gallery_section, max=0) %}
   {% if gallery_section.pages | length > 0 %}
     <section class="page-width">
       <h2>{{ gallery_section.title }}</h2>
