@@ -38,7 +38,7 @@
   --aspect-ratio: 3 / 4;
   --color-accent: #5465ff; /* hsluv 264 100 50 */
   --color-text: #262626;
-  --delay: 0.2s;
+  --duration: 0.2s;
   --font-family: 'Montserrat', sans-serif;
   --header-height: 64px;
   --layer-header: 1;
@@ -60,7 +60,7 @@ a {
   color: inherit;
   text-decoration-thickness: 0.075em;
   text-underline-offset: 0.05em;
-  transition: all var(--delay);
+  transition: all var(--duration);
 }
 
 a:hover {
@@ -204,7 +204,10 @@ section > * + * {
 
 /* Third party */
 
-.medium-zoom-image--opened,
-.medium-zoom-overlay {
-  z-index: var(--layer-overlay);
+.Header {
+  transition: opacity 0.3s; /* matches .medium-zoom-overlay transition */
+}
+
+.medium-zoom--opened .Header {
+  opacity: 0;
 }
