@@ -89,7 +89,8 @@ section > * + * {
 }
 
 .page-width {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 8px;
   width: min(120ch, 100vw);
 }
