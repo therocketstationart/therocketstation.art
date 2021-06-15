@@ -50,6 +50,7 @@ body {
 }
 
 main {
+  margin-bottom: 64px;
   margin-top: calc(var(--header-height) + 48px);
 }
 
@@ -79,8 +80,11 @@ img {
   width: 100%;
 }
 
-section > * + *,
 section + section {
+  margin-top: 48px;
+}
+
+section > * + * {
   margin-top: 16px;
 }
 
