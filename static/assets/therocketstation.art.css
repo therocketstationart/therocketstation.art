@@ -68,6 +68,10 @@ h2 {
   font-size: 2rem;
   font-weight: 900;
   text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: -0.15em;
+  text-underline-position: under;
 }
 
 img {
