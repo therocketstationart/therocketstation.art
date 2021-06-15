@@ -92,7 +92,7 @@ section > * + * {
 .page-width {
   margin-left: auto;
   margin-right: auto;
-  padding: 0 8px;
+  padding: 0 16px;
   width: min(120ch, 100vw);
 }
 
@@ -118,6 +118,7 @@ section > * + * {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   text-decoration: none;
 }
 
@@ -139,13 +140,12 @@ section > * + * {
 }
 
 .Header__ArtistName {
-  text-align: center;
+  display: none;
 }
 
 .Header__Menu {
-  display: flex;
+  display: none; /* TODO: mobile menu */
   flex: 1;
-  justify-content: flex-end;
 }
 
 .Header__Menu ul {
@@ -165,11 +165,32 @@ section > * + * {
   text-decoration-color: var(--color-accent);
 }
 
+@media (min-width: 1080px) {
+  .Header__HomeLink {
+    justify-content: flex-start;
+  }
+
+  .Header__ArtistName {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Header__Menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 .Gallery {
   display: grid;
   gap: 32px 16px;
-  grid-template-columns: repeat(3, 1fr);
   margin-top: 32px;
+}
+
+@media (min-width: 1080px) {
+  .Gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .GalleryItem > * + * {
