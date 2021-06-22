@@ -3,5 +3,9 @@
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
 {% block content %}
-  {# TODO #}
+  <section class="page-width">
+    <h2>{{ page.title }}</h2>
+
+    {{ page.content }}
+  </section>
 {% endblock %}
