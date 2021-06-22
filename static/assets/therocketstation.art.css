@@ -231,3 +231,7 @@ section > * + * {
 .medium-zoom--opened .Header {
   opacity: 0;
 }
+
+.medium-zoom-image--opened {
+  object-fit: cover; /* keeps aspect ratio when not 3:4 */
+}
