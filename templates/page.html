@@ -3,9 +3,9 @@
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
 {% block content %}
-  <section class="page-width">
+  <section class="PageContent page-width">
     <h2>{{ page.title }}</h2>
 
-    {{ page.content }}
+    {{ page.content | safe }}
   </section>
 {% endblock %}

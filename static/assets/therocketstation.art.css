@@ -181,6 +181,18 @@ section > * + * {
   }
 }
 
+.PageContent {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.PageContent p {
+  font-size: 1.25rem;
+  max-width: 100%;
+  width: 72ch;
+}
+
 .Gallery {
   display: grid;
   gap: 32px 16px;
