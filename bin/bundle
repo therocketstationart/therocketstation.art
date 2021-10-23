@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"/..
+
+npx esbuild --bundle --minify "$@" src/index.js >static/assets/therocketstation.art.js

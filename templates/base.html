@@ -26,11 +26,7 @@
         <ul>
           {% set collections = get_section(path='collections/_index.md', metadata_only=true) %}
 
-          {% for path in collections.subsections %}
-            {% set collection = get_section(path=path, metadata_only=true) %}
-
-            <li><a href="{{ collection.path }}">{{ collection.title }}</a></li>
-          {% endfor %}
+          <li><a href="/">Work</a></li>
           <li><a href="/about">About</a></li>
         </ul>
       </nav>

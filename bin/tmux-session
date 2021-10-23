@@ -2,39 +2,36 @@
 
 session_name=therocketstation-art
 
-tmux_check () {
+is_active () {
 	tmux has-session -t $session_name 2>/dev/null
 }
 
-tmux_attach () {
+attach () {
 	tmux attach-session -t $session_name
-}
-
-tmux_cleanup () {
-	true
 }
 
 open_in_browser () {
 	xdg-open "http://127.0.0.1:${PORT:-8080}/"
 }
 
-tmux_start () {
+start () {
 	cd "$(dirname "$0")"/..
 
 	set -e; trap 'tmux kill-session -t $session_name' EXIT
 	tmux new-session -d -s $session_name -n sh -x $(tput cols) -y $(tput lines)
-	tmux new-window -d -t $session_name -n watch \
+	tmux new-window -d -t $session_name -n serve \
 		./bin/start
+	tmux new-window -d -t $session_name -n bundle \
+		./bin/bundle --watch
 	tmux set-option -t $session_name remain-on-exit on
 	set +e; trap - EXIT
 
 	open_in_browser
 }
 
-if tmux_check; then
-	[ -t ] && tmux_attach
+if is_active; then
+	[ -t ] && attach
 else
-	tmux_cleanup
-	tmux_start
-	tmux_attach
+	start
+	attach
 fi

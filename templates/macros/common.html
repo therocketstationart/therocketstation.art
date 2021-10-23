@@ -1,8 +1,6 @@
 {% macro gallery(gallery_section, max=0) %}
   {% if gallery_section.pages | length > 0 %}
     <section class="page-width">
-      <h2>{{ gallery_section.title }}</h2>
-
       <div class="Gallery">
         {% if max > 0 %}
           {% set items = gallery_section.pages | slice(end=max) %}
@@ -14,14 +12,22 @@
           {% set without_ext = self::gallery_image_without_ext(item=item) %}
           {% set image = without_ext ~ '.jpg' %}
           {% set image_hover = without_ext ~ '-hover.jpg' %}
+          {% set image_meta = get_image_metadata(path=image) %}
 
           <div class="GalleryItem">
-            <div class="GalleryItem__Image">
-              <img alt="{{ item.title }}" src="{{ image }}" />
-            </div>
-            <div class="GalleryItem__Title">
-              {{ item.title }}
-            </div>
+            <a href="{{ item.path }}">
+              <div class="GalleryItem__Image">
+                <img
+                  alt="{{ item.title }}"
+                  src="{{ image }}"
+                  width="{{ image_meta.width }}"
+                  height="{{ image_meta.height }}"
+                />
+              </div>
+              <div class="GalleryItem__Title">
+                {{ item.title }}
+              </div>
+            </a>
           </div>
         {% endfor %}
       </div>

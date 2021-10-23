@@ -5,11 +5,5 @@
 {% block title %}{{ config.title }}{% endblock %}
 
 {% block content %}
-  {% set collections = get_section(path='collections/_index.md', metadata_only=true) %}
-
-  {% for path in collections.subsections %}
-    {{ common::gallery(gallery_section=get_section(path=path), max=6) }}
-
-    {# TODO: If more than 6 items in the collection, render 'View all' link to collection page. #}
-  {% endfor %}
+  {{ common::gallery(gallery_section=get_section(path='collections/work/_index.md')) }}
 {% endblock %}
