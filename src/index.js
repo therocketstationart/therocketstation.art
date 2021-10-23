@@ -3,7 +3,7 @@ import Masonry from 'masonry-layout';
 const gallery = document.querySelector('.Gallery');
 
 const masonry = new Masonry(gallery, {
-  gutter: 16,
+  gutter: 24,
   initLayout: false,
   percentPosition: true,
   transitionDuration: 0,
