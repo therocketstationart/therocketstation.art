@@ -91,6 +91,7 @@ h2 {
 
 img {
   display: block;
+  height: auto;
   width: 100%;
 }
 
@@ -233,11 +234,6 @@ section > * + * {
   }
 }
 
-.GalleryItem__Image img {
-  height: auto;
-  width: 100%;
-}
-
 .GalleryItem__Title {
   background: var(--color-text);
   bottom: 0;
@@ -256,6 +252,10 @@ section > * + * {
 
 .GalleryItem:hover .GalleryItem__Title {
   opacity: 1;
+}
+
+.SingleImage {
+  max-width: 1024px;
 }
 
 /* Third party */

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% import 'macros/common.html' as common %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+
+{% block content %}
+  <section class="PageContent page-width">
+    <h1>{{ page.title }}</h1>
+
+    {{ page.content | safe }}
+
+    {% set image = common::gallery_image(item=page) %}
+    {% set image_meta = get_image_metadata(path=image) %}
+
+    <div class="SingleImage">
+      <img
+        alt="{{ page.title }}"
+        src="{{ image }}"
+        width="{{ image_meta.width }}"
+        height="{{ image_meta.height }}"
+      />
+    </div>
+  </section>
+{% endblock %}

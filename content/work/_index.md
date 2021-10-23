@@ -1,5 +1,5 @@
 +++
 title = 'Work'
 sort_by = 'date'
-weight = 1
+page_template = 'page_work.html'
 +++
