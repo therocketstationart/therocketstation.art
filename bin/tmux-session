@@ -25,7 +25,7 @@ tmux_start () {
 	tmux new-session -d -s $session_name -n sh -x $(tput cols) -y $(tput lines)
 	tmux new-window -d -t $session_name -n watch \
 		./bin/start
-	tmux set-option -g -t $session_name remain-on-exit on
+	tmux set-option -t $session_name remain-on-exit on
 	set +e; trap - EXIT
 
 	open_in_browser
