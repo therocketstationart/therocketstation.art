@@ -3,27 +3,27 @@
     <section class="page-width">
       <div class="Gallery">
         {% if max > 0 %}
-          {% set items = gallery_section.pages | slice(end=max) %}
+          {% set pages = gallery_section.pages | slice(end=max) %}
         {% else %}
-          {% set items = gallery_section.pages %}
+          {% set pages = gallery_section.pages %}
         {% endif %}
 
-        {% for item in items %}
-          {% set image = self::gallery_image(item=item) %}
+        {% for page in pages %}
+          {% set image = self::gallery_image(page=page) %}
           {% set image_meta = get_image_metadata(path=image) %}
 
           <div class="GalleryItem">
-            <a href="{{ item.path }}">
+            <a href="{{ page.path }}">
               <div class="GalleryItem__Image">
                 <img
-                  alt="{{ item.title }}"
+                  alt="{{ page.title }}"
                   src="{{ image }}"
                   width="{{ image_meta.width }}"
                   height="{{ image_meta.height }}"
                 />
               </div>
               <div class="GalleryItem__Title">
-                {{ item.title }}
+                {{ page.title }}
               </div>
             </a>
           </div>
@@ -33,8 +33,8 @@
   {% endif %}
 {% endmacro %}
 
-{% macro gallery_image(item) %}
-  {%- set without_ext = ['', 'assets'] | concat(with=item.components) | join(sep='/') -%}
+{% macro gallery_image(page) %}
+  {%- set without_ext = ['', 'assets'] | concat(with=page.components) | join(sep='/') -%}
 
   {{- without_ext ~ '.jpg' -}}
 {% endmacro %}

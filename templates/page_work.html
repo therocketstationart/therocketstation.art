@@ -10,7 +10,7 @@
 
     {{ page.content | safe }}
 
-    {% set image = common::gallery_image(item=page) %}
+    {% set image = common::gallery_image(page=page) %}
     {% set image_meta = get_image_metadata(path=image) %}
 
     <div class="SingleImage">
