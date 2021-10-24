@@ -1,6 +1,6 @@
 +++
-title = 'Frida y su Loro'
-date = 2021-07-19
+title = 'Ardillas Voladoras'
+date = 2021-07-11
 
 [extra]
 medium = ['acrylic paint', 'fineliner pen']
