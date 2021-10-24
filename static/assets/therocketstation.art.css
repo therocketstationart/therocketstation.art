@@ -246,6 +246,7 @@ section > * + * {
   place-items: center;
   position: absolute;
   right: 0;
+  text-transform: uppercase;
   top: 0;
   transition: opacity 0.3s;
 }
