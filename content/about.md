@@ -2,10 +2,20 @@
 title = 'About Me'
 +++
 
-My name is Lucia, and I am a Peruvian artist, currently living in New Zealand.
+My name is Lucia, and I am a Peruvian artist, currently settling in to my new
+life in Nelson, New Zealand.
 
-I come from a beautiful city called Cusco. When I was a child I searched for
-many ways to entertain myself, and thanks to the intervention of several people
-I was guided to the world of art. Since then, I have never stopped creating and
-exploring ideas. I specialize in works with a lot of detail, black acrylic
-paint, and black ink fineliner pens.
+I come from a beautiful city called Cusco in the Peruvian Andes. As a child I
+sought many ways to entertain myself, and thanks to the guidance of several
+people I was introduced to the world of art. Once I discovered this part of
+myself, I never stopped creating or exploring ideas. I enjoy working on pieces
+with a lot of fine detail, becoming absorbed in the process, an escape from the
+trials and stresses of daily life.
+
+The inspiration behind each work is the therapy that art gives me. Being an
+immigrant I often find myself alone with my thoughts and my art helps me to find
+peace and security in myself so I can connect with people and this new
+environment.
+
+I hope you find something that speaks to you in my art and thank you for yor
+support.
